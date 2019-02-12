@@ -1,0 +1,16 @@
+{%extends "basic.html"%}
+    {% block header %}
+        List
+    {% endblock %}
+    {% block content %}
+        {% for page in pages %}
+            <ul>
+                <li><a href="{{page.get_absolute_url}}">{{page.title}}</a></li>
+                <li>{{page.content}}</li>
+                <li>{{page.last_update}}</li>
+                <br>
+            </ul>
+        {% endfor %}
+
+     
+   {% endblock %}
